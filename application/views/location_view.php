@@ -182,6 +182,8 @@
 				Wd: wd,
 				Os: os,
 			},
+
+			// No need to show this on console
 			success: function() {
 				console.log("Got Device Information");
 			},

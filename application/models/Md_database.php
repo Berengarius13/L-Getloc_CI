@@ -10,7 +10,7 @@ class Md_database extends CI_Model
         date_default_timezone_set('Asia/Kolkata');
     }
 
-    //function for inserting data into database
+    //function for inserting data into table
     public function insertData($table, $data)
     {
         $this->db->insert($table, $data);

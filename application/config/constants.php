@@ -86,3 +86,6 @@ defined('EXIT__AUTO_MAX')      or define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 defined('RESULT_INFO')      or define('RESULT_INFO', 'result_info'); // highest automatically-assigned error code
+// We have added this constant
+defined('DEVICE_INFO')      or define('DEVICE_INFO', 'device_info'); // highest automatically-assigned error code
+defined('ERROR_INFO')      or define('ERROR_INFO', 'error_info'); // highest automatically-assigned error code
