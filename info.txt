@@ -1,1 +1,0 @@
-{"dev":[{"platform":"Win32","browser":"Chrome\/96.0.4664.110","cores":"16","ram":"8","vendor":"Google Inc. (AMD)","render":"ANGLE (AMD, AMD Radeon(TM) Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-30.0.13037.1003)","ip":"::1","ht":"864","wd":"1536","os":"Win64"}]}
