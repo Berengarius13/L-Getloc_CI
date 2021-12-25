@@ -27,6 +27,8 @@ $base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" :
 $base_url .= "://" . @$_SERVER['HTTP_HOST'];
 $base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 $config['base_url'] = $base_url;
+// Here we set our base url 
+// $config['base_url'] = 'http://localhost/ciblog';
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,7 @@ $config['base_url'] = $base_url;
 | variable so that it is blank.
 |
 */
+// WE leave it blank
 $config['index_page'] = '';
 
 /*

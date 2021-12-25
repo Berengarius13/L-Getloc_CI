@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
+/*If the defined() part is true, then it just stops there and doesn’t look at the rest of the line. If it’s not true, then it does evaluate the rest of the line, which is an exit statement, so PHP will happily exit. */
 class Location extends CI_Controller
 {
 
@@ -21,7 +21,10 @@ class Location extends CI_Controller
 	 */
 	public function index()
 	{
+		// Loads the first page we want to load on webpage
 		$this->load->view('location_view');
+
+		// $this is use for current class
 	}
 	public function load_result()
 	{

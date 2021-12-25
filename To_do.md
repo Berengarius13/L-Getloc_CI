@@ -16,4 +16,6 @@
 
 5. Yet to implement load_error and JavaScript is still out in the open. 
 
-5. We can run ML algorithms to analyze data.  
+7. We can run ML algorithms to analyze data.  
+
+5. MAC and IMEI

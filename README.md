@@ -229,3 +229,35 @@ class Md_database extends CI_Model
 We have used sql here to store data in database
 ```
 
+***
+
+#### We need to create .htaccess file 
+
+// We are basically redirecting to the controller  
+
+```
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /JB042/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
+```
+
+fill this inside
+
+***
+
+* Good rule of thumb is to keep controllers plural and models singular 
+* In controllers we will set the 
+
+```
+class Location extends CI_Controller {}
+// WE will set this class 
+```
+
+* What we are doing here is to set site.com/{this}/{that}
+* So we are basically setting this and that properly. 
+* We create a views then set its controller and routes
+
