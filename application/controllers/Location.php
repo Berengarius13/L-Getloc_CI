@@ -189,6 +189,7 @@ class Location extends CI_Controller
 			);
 			
 			$resu = $this->Md_database->insertData(DEVICE_INFO, $data['dev']);
+			// Only need to send $data['dev']
 			echo $resu;
 			$jdata = json_encode($data);
 
