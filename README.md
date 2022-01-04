@@ -261,3 +261,26 @@ class Location extends CI_Controller {}
 * So we are basically setting this and that properly. 
 * We create a views then set its controller and routes
 
+***
+
+#### Dashboard
+
+* To create dashboard we first set routes for when we search "link/admin" and "admin/logout"
+* We create controller named "Admin" and we will define relevant PHP functions in the path
+* We will create views folder for admin.
+
+> We have used @ when an undefined variable error came "Message: Undefined index: "
+>
+> or by switching from development to production mode
+
+* Find 'href' and 'src=' and replace with "src="<?php echo base_url();?>assets/admin/"
+
+```php
+ <?php// verify the user login infosession_start();/*Some predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.*/$_SESSION['username'] = "harry";$_SESSION['favCat'] = "Books";echo "we have saved your session";?>    // Later we will access it in other file as<?php  session_start();     echo "welcome". $_SESSION['username'];?>    // Later we will log out by<?php   session_start();    session_unset();    session_destroy();?>        // use isset($_SESSION['username']) to check wether session is set or not otherwise give error please log in to coninue     phpphp
+```
+
+***
+
+#### IMPORTANT
+
+Usually in PHP we will divide page in sections

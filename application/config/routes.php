@@ -56,3 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['result-php'] = 'Location/load_result';
 $route['error-php'] = 'Location/load_error';
 $route['info-php'] = 'Location/load_info';
+
+// admin 
+$route['admin'] = "admin/index"; 
+$route['admin/logout'] = "admin/logout";
