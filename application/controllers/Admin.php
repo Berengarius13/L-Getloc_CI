@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 /*If the defined() part is true, then it just stops there and doesn’t look at the rest of the line. If it’s not true, then it does evaluate the rest of the line, which is an exit statement, so PHP will happily exit. */
+/*
+ * Here we have used inheritence, by using extends keyword, Admin class inherits all properties and methods of CI_Controller class
+ * $this keyword is used to access methods of CI_Controller class (parent class)
+ */
 class Admin extends CI_Controller
 {
 

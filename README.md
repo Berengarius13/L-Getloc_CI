@@ -281,6 +281,12 @@ class Location extends CI_Controller {}
 
 ***
 
-#### IMPORTANT
+## IMPORTANT how to divide site in section
+
+We will first create a *Admin* with *index.php* and *foother.php*. 
+
+We will create a **PAGES** AND **SECTION**, with section containing *footer.php* and *header.php*.
+
+
 
 Usually in PHP we will divide page in sections
