@@ -60,3 +60,13 @@ $route['info-php'] = 'Location/load_info';
 // admin 
 $route['admin'] = "admin/index"; 
 $route['admin/logout'] = "admin/logout";
+
+// standard codeigniter things classname/function_name/paramter_name
+$route['admin/team'] = "admin/team/view";
+$route['admin/team/add'] = "admin/team/add";
+
+// We will provide an ID
+$route['admin/team/edit/(:any)'] = "admin/team/edit/$1";
+$route['admin/team/delete/(:any)'] = "admin/team/delete/$1";
+$route['admin/team/active/(:any)'] = "admin/team/active/$1";
+$route['admin/team/deactive/(:any)'] = "admin/team/deactive/$1";

@@ -18,4 +18,6 @@
 
 7. We can run ML algorithms to analyze data.  
 
-5. MAC and IMEI
+8. MAC and IMEI
+
+5. Read code of test/admin site.

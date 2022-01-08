@@ -68,6 +68,54 @@ class Admin extends CI_Controller
 
 		// $this is use for current class
 	}
+	public function team ($action, $id = false){
+		switch($action){
+			case "view":
+				// Add table name here
+					$loc_data = $this->db->get("result_info")->result_array();
+					$page_data['page_title'] = "Location Data";
+					$page_data['loc_datas'] = $loc_data;
+					
+					$page_data['page'] = "table/location_table";
+					$this->load->view('admin/index', $page_data);
+				break;
+			
+			case "add": 
+				echo "add";
+				break;
+			
+			case "edit":
+				echo "edit";
+				break;
+			
+			case "delete":
+				// WE will check first wether Id is there or not
+				// Where helps to generat WHERE clause
+				if($id){
+					$this->db->where('id', $id);
+					$this->db->delete('result_info');
+					redirect("admin/team");
+				}
+				else
+				{redirect("admin/team");} 
+
+				break;
+			
+			case "active":
+				echo "id = ".$id;
+				echo "active";
+				break;
+
+			case "inactive":
+				echo "id = ".$id;
+				echo "inactive";
+				break;
+
+
+
+		}
+
+	}
 	public function logout()
     {   
         // Why this?
