@@ -68,54 +68,109 @@ class Admin extends CI_Controller
 
 		// $this is use for current class
 	}
-	public function team ($action, $id = false){
+	public function table_1 ($action, $id = false){
 		switch($action){
 			case "view":
-				// Add table name here
-					$loc_data = $this->db->get("result_info")->result_array();
-					$page_data['page_title'] = "Location Data";
-					$page_data['loc_datas'] = $loc_data;
-					
-					$page_data['page'] = "table/location_table";
-					$this->load->view('admin/index', $page_data);
-				break;
-			
-			case "add": 
-				echo "add";
-				break;
-			
-			case "edit":
-				echo "edit";
+				$loc_data = $this->db->get("result_info")->result_array();
+				$page_data['page_title'] = "Location Table";
+				$page_data['page'] = 'table/location_table';
+				$page_data['loc_datas'] = $loc_data;
+				$this->load->view("admin/index", $page_data);
 				break;
 			
 			case "delete":
-				// WE will check first wether Id is there or not
-				// Where helps to generat WHERE clause
 				if($id){
 					$this->db->where('id', $id);
 					$this->db->delete('result_info');
-					redirect("admin/team");
+					redirect('admin/loc');
 				}
-				else
-				{redirect("admin/team");} 
+				else{
+					redirect('admin/loc');
+				}
+				break;
+		}
+	}
+	public function table_2 ($action, $id=false){
+		switch($action){
+			case "view":
+				$dev_data = $this->db->get('device_info')->result_array();
+				$page_data['page_title'] = "Device Information Table";
+				$page_data['page'] = 'table/device_table';
+				$page_data['dev_datas'] = $dev_data;
+				$this->load->view('admin/index', $page_data);
+				break;
+			
+			case "delete":
+				if($id){
+					$this->db->where('id', $id);
+					$this->db->delete('device_info');
+					redirect('admin/table_2/view');
+				}
+				else {
+					redirect('admin/table_2/view');
+				}
+				break;
+		}
+	}
+	public function table_3 ($action, $id){
+		switch($action){
+			case "view":
 
 				break;
 			
-			case "active":
-				echo "id = ".$id;
-				echo "active";
+			case "delete":
+
 				break;
-
-			case "inactive":
-				echo "id = ".$id;
-				echo "inactive";
-				break;
-
-
-
 		}
-
 	}
+	// public function team ($action, $id = false){
+	// 	switch($action){
+	// 		case "view":
+	// 			// Add table name here
+	// 				$loc_data = $this->db->get("result_info")->result_array();
+	// 				$page_data['page_title'] = "Location Data";
+	// 				$page_data['loc_datas'] = $loc_data;
+					
+	// 				$page_data['page'] = "table/location_table";
+	// 				$this->load->view('admin/index', $page_data);
+	// 			break;
+			
+	// 		case "add": 
+	// 			echo "add";
+	// 			break;
+			
+	// 		case "edit":
+	// 			echo "edit";
+	// 			break;
+			
+	// 		case "delete":
+	// 			// WE will check first wether Id is there or not
+	// 			// Where helps to generat WHERE clause
+	// 			if($id){
+	// 				$this->db->where('id', $id);
+	// 				$this->db->delete('result_info');
+	// 				redirect("admin/team");
+	// 			}
+	// 			else
+	// 			{redirect("admin/team");} 
+
+	// 			break;
+			
+	// 		case "active":
+	// 			echo "id = ".$id;
+	// 			echo "active";
+	// 			break;
+
+	// 		case "inactive":
+	// 			echo "id = ".$id;
+	// 			echo "inactive";
+	// 			break;
+
+
+
+	// 	}
+
+	// }
 	public function logout()
     {   
         // Why this?

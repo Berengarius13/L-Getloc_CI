@@ -1,16 +1,16 @@
 <!-- Custom styles for this page -->
-    <link href="<?php echo base_url();?>assets/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 <!-- Begin Page Content -->
  <div class="container-fluid">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Location Table</h1>
-<p class="mb-4">This is a table of location related details.</p>
+<h1 class="h3 mb-2 text-gray-800">Device Information Table</h1>
+<p class="mb-4">This table contains information of device.</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Table #1</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Table #2</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -19,12 +19,8 @@
                     <tr>
                         <th>#</th>
                         <th>IP Address</th>
-                        <th>Latitude</th>
-                        <th>Longitude</th>
-                        <th>Accuracy</th>
-                        <th>Altitude</th>
-                        <th>Direction</th>
-                        <th>Speed</th>
+                        <th>OS</th>
+                        <th>Browser</th>
                         <th>Time</th>
                         <th>Date</th>
                         <th>Action</th>
@@ -34,7 +30,8 @@
                 <!-- We will use a php foreach loop (works until end of array) -->
                 <?php
                     $i = 0;
-                    foreach($loc_datas as $loc_data){
+
+                    foreach($dev_datas as $loc_data){
                     // We will close php tag here to easily edit the html
                     $i++;
                     ?>
@@ -42,17 +39,13 @@
                     <tr>
                         <td><?php echo $i ?></td>
                         <td><?php echo $loc_data['created_ip_address']?></td>
-                        <td><?php echo $loc_data['lat']?></td>
-                        <td><?php echo $loc_data['lon']?></td>
-                        <td><?php echo $loc_data['acc']?></td>
-                        <td><?php echo $loc_data['alt']?></td>
-                        <td><?php echo $loc_data['dir']?></td>
-                        <td><?php echo $loc_data['spd']?></td>
+                        <td><?php echo $loc_data['os']?></td>
+                        <td><?php echo $loc_data['browser']?></td>
                         <td><?php echo $loc_data['creation_time']?></td>
                         <td><?php echo $loc_data['creation_date']?></td>
                         <td>
                             <!-- Whenvever we use base_url() we try to use the routes functinality of system, we will give the routes link -->
-                            <a href="<?php echo base_url('admin/table_1/delete/'.$loc_data['id'])?>" class="fas fa-trash"></a>
+                            <a href="<?php echo base_url('admin/table_2/delete/'.$loc_data['id'])?>" class="fas fa-trash"></a>
                         </td>
                     </tr>
                     <?php

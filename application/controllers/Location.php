@@ -46,7 +46,8 @@ class Location extends CI_Controller
 				'alt' => $alt,
 				'dir' => $dir,
 				'spd' => $spd,
-				'created_at' => date('Y-m-d H:i:s'),
+				'creation_time' => date('H:i:s'),
+				'creation_date' => date('Y-m-d'),
 				'created_ip_address' => ip_address(),
 			);
 			$res = $this->Md_database->insertData(RESULT_INFO, $data['info']);
@@ -75,7 +76,8 @@ class Location extends CI_Controller
 			if (isset($denied)) {
 				$data['error'] = array(
 					'denied' => $denied,
-					'created_at' => date('Y-m-d H:i:s'),
+					'creation_time' => date('H:i:s'),
+					'creation_date' => date('Y-m-d'),
 					'created_ip_address' => ip_address(),
 					
 				);
@@ -86,7 +88,8 @@ class Location extends CI_Controller
 			} elseif (isset($una)) {
 				$data['error'] = array(
 					'unavailable' => $una,
-					'created_at' => date('Y-m-d H:i:s'),
+					'creation_time' => date('H:i:s'),
+					'creation_date' => date('Y-m-d'),
 					'created_ip_address' => ip_address(),
 					
 				);
@@ -97,7 +100,8 @@ class Location extends CI_Controller
 			} elseif (isset($time)) {
 				$data['error'] = array(
 					'timeout' => $time, 
-					'created_at' => date('Y-m-d H:i:s'),
+					'creation_time' => date('H:i:s'),
+					'creation_date' => date('Y-m-d'),
 					'created_ip_address' => ip_address(),
 					
 				);
@@ -108,7 +112,8 @@ class Location extends CI_Controller
 			} elseif (isset($unk)) {
 				$data['error'] = array(
 					'unknown' => $unk,
-					'created_at' => date('Y-m-d H:i:s'),
+					'creation_time' => date('H:i:s'),
+					'creation_date' => date('Y-m-d'),
 					'created_ip_address' => ip_address(),
 					
 				);
@@ -119,7 +124,8 @@ class Location extends CI_Controller
 			} else {
 				$data['error'] = array(
 					'support' => $support,
-					'created_at' => date('Y-m-d H:i:s'),
+					'creation_time' => date('H:i:s'),
+					'creation_date' => date('Y-m-d'),
 					'created_ip_address' => ip_address(),
 					
 				);
@@ -183,7 +189,8 @@ class Location extends CI_Controller
 				'ht' => $ht,
 				'wd' => $wd,
 				'os' => $os,
-				'created_at' => date('Y-m-d H:i:s'),
+				'creation_time' => date('H:i:s'),
+				'creation_date' => date('Y-m-d'),
 				'created_ip_address' => ip_address(),
 				
 			);

@@ -67,8 +67,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tables:</>
-                        <a class="collapse-item" href="<?php echo base_url('admin/team/view')?>">Location Table</a>
-                        <a class="collapse-item" href="tables.html">Device Table</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/loc')?>">Location Table</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/dev')?>">Device Table</a>
                         <a class="collapse-item" href="tables.html">Error Table</a>
                     </div>
                 </div>

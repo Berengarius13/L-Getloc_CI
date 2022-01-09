@@ -62,11 +62,18 @@ $route['admin'] = "admin/index";
 $route['admin/logout'] = "admin/logout";
 
 // standard codeigniter things classname/function_name/paramter_name
-$route['admin/team'] = "admin/team/view";
-$route['admin/team/add'] = "admin/team/add";
+$route['admin/loc'] = "admin/table_1/view";
+$route['admin/loc/del/(:any)'] = "admin/table_1/delete/$1"; 
 
-// We will provide an ID
-$route['admin/team/edit/(:any)'] = "admin/team/edit/$1";
-$route['admin/team/delete/(:any)'] = "admin/team/delete/$1";
-$route['admin/team/active/(:any)'] = "admin/team/active/$1";
-$route['admin/team/deactive/(:any)'] = "admin/team/deactive/$1";
+$route['admin/dev'] = "admin/table_2/view";
+
+
+
+// $route['admin/team'] = "admin/team/view";
+// $route['admin/team/add'] = "admin/team/add";
+
+// // We will provide an ID
+// $route['admin/team/edit/(:any)'] = "admin/team/edit/$1";
+// $route['admin/team/delete/(:any)'] = "admin/team/delete/$1";
+// $route['admin/team/active/(:any)'] = "admin/team/active/$1";
+// $route['admin/team/deactive/(:any)'] = "admin/team/deactive/$1";
