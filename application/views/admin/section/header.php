@@ -54,7 +54,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Overall Information
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -62,14 +62,14 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Overall Information</span>
+                    <span>Tables</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tables:</>
+                        <h6 class="collapse-header">Data:</>
                         <a class="collapse-item" href="<?php echo base_url('admin/loc')?>">Location Table</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/dev')?>">Device Table</a>
-                        <a class="collapse-item" href="tables.html">Error Table</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/error')?>">Error Table</a>
                     </div>
                 </div>
             </li>

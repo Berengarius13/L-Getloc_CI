@@ -104,22 +104,34 @@ class Admin extends CI_Controller
 				if($id){
 					$this->db->where('id', $id);
 					$this->db->delete('device_info');
-					redirect('admin/table_2/view');
+					// Properly redirect it
+					redirect('admin/dev');
 				}
 				else {
-					redirect('admin/table_2/view');
+					redirect('admin/dev');
 				}
 				break;
 		}
 	}
-	public function table_3 ($action, $id){
+	public function table_3 ($action, $id=false){
 		switch($action){
 			case "view":
-
+				$error_data = $this->db->get('error_info')->result_array();
+				$page_data['page_title'] = "Error Information Table";
+				$page_data['page'] = 'table/error_table';
+				$page_data['error_datas'] = $error_data;
+				$this->load->view('admin/index', $page_data);
 				break;
 			
 			case "delete":
-
+				if($id){
+					$this->db->where('id', $id);
+					$this->db->delete('error_info');
+					redirect('admin/error');
+				}
+				else {
+					redirect('admin/error');
+				}
 				break;
 		}
 	}

@@ -67,6 +67,7 @@ $route['admin/loc/del/(:any)'] = "admin/table_1/delete/$1";
 
 $route['admin/dev'] = "admin/table_2/view";
 
+$route['admin/error'] = "admin/table_3/view";
 
 
 // $route['admin/team'] = "admin/team/view";
