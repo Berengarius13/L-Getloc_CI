@@ -290,3 +290,60 @@ We will create a **PAGES** AND **SECTION**, with section containing *footer.php*
 
 
 Usually in PHP we will divide page in sections
+
+***
+
+### HOW TO CREATE DYNAMIC IN PHP
+
+* Send data to view and ask user to input.
+* Then run ajax and view out put you get as success on frontend.f
+
+## SECOND SESSION
+
+1. Set encryption key. (CI encryption key generator, google it)
+
+   Config, set encrytion key 
+
+2. Table log template 
+
+3. Share the project that you use for common template
+
+4. Add common helper function. 
+
+5. Look for Yugals video for proper practices. 
+
+6. Copy that function and directly use for form submission. 
+
+7.  Ctrl + f5 to refresh JavaScript, when getting error
+
+8. (common database have this status column, which will 1 for not active (temporally do it), '3' for soft delete (cannot be viewed on views))
+
+9. Bootstrap 4 common table function check.
+
+10. Use '-' in routes.
+
+11. Why we are not using react. 
+
+12. Set special 'exclude' field. 
+
+13. Special function in CN_Master fro searching. 
+
+14. Edit and delete functionality standard functionality. 
+
+15. Search what is encode id, encode it 8 times with standard function. 
+
+16. Unique encryption ID. (a function in controller, study about why and how).
+
+17. Learn how table never show null value and always capitalizes. 
+
+18. CN_Master have how to edit functionality pre defined.
+
+19. 'status<>' = 3, id => decode why? , We are encrypting the going ID somehow. We are inputting the going ID and while using it we are decrypting it. URL is in encrypted format.
+
+20.  Look for functions in 'My_controller'. 
+
+21. Turnery operator is used at places.
+
+22. We are encrypting everything, every variable we are sending to back end.
+
+23.  

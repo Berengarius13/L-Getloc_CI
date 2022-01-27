@@ -64,11 +64,10 @@ $route['admin/logout'] = "admin/logout";
 // standard codeigniter things classname/function_name/paramter_name
 $route['admin/loc'] = "admin/table_1/view";
 $route['admin/loc/del/(:any)'] = "admin/table_1/delete/$1"; 
-
 $route['admin/dev'] = "admin/table_2/view";
-
 $route['admin/error'] = "admin/table_3/view";
 
+// Select Dropbox Routes
 
 // $route['admin/team'] = "admin/team/view";
 // $route['admin/team/add'] = "admin/team/add";

@@ -6,23 +6,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * $this keyword is used to access methods of CI_Controller class (parent class)
  */
 class Admin extends CI_Controller
-{
+{	
+	/*
+    * We are defining a constructer here 
+    * This controller will handle http request and create an object
+    * This function will run when object of this class has been created
+    * So when object of this class has been created it will load dynamic dependent model
+    * So we don't have to load it again and again in class.
+    */
+	function __construct()
+    {
+        parent::__construct();
+        //          date_default_timezone_set('Asia/kabul');
+        $this->load->model('Admin_model');
+    }
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		// We write condition to check whose userid it is 
@@ -53,6 +51,12 @@ class Admin extends CI_Controller
 		// here we check if admin u_id is set or not
         if (@$this->session->userdata['admin_uid']){
             // redirect to dasboard
+
+			// We load all the datasets in variables
+			$page_data['loc_datas'] = $this->Admin_model->fetch_loc();
+
+			//
+
             $page_data['page_title'] = "Dashboard";
             $page_data['page'] = "dashboard";
             $this->load->view('admin/index', $page_data);
@@ -63,11 +67,26 @@ class Admin extends CI_Controller
             
             $this->load->view('admin/login', $page_data);
         }
-
-		
-
 		// $this is use for current class
 	}
+
+	// For setting date for dropdown
+	// We are sending the "ip_id" variable to the model
+	public function fetch_date(){
+		if($this->input->post('ip')){
+			echo $this->Admin_model->fetch_date($this->input->post('ip'));
+		}
+	}
+
+	public function fetch_time(){
+		
+		if($this->input->post('date')&& $this->input->post('ip')){
+			
+			$info = array($this->input->post('date'),$this->input->post('ip'));
+			$validate = $this->Admin_model->fetch_time($info);
+		}
+	}
+
 	public function table_1 ($action, $id = false){
 		switch($action){
 			case "view":
@@ -192,3 +211,10 @@ class Admin extends CI_Controller
     }
 
 }
+/*
+* In MVC model (Model, Controller, View) we divide flow of program in three parts
+* View takes care of the front end part, the part we show to user
+* Model takes care are the logic processing
+* Controller is bascially the intermediate between them.
+* Note Model and View never interact with each other.
+*/

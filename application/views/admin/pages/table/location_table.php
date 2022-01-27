@@ -53,6 +53,7 @@
                         <td>
                             <!-- Whenvever we use base_url() we try to use the routes functinality of system, we will give the routes link -->
                             <a href="<?php echo base_url('admin/table_1/delete/'.$loc_data['id'])?>" class="fas fa-trash"></a>
+                            <a href="<?php echo "https://maps.google.com/?q=".$loc_data['lat'].",".$loc_data['lon']?>" target="_blank" class="fas fa-map-marked"></a>
                         </td>
                     </tr>
                     <?php

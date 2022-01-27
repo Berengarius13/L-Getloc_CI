@@ -20,4 +20,6 @@
 
 8. MAC and IMEI
 
-5. Read code of test/admin site.
+9. Read code of test/admin site.
+
+5. Implement front end when you get error.
