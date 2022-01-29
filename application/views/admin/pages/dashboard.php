@@ -184,7 +184,38 @@
 
 
     </div>
+    <!-- Content Row -->
 
+    <div class="row">
+
+
+
+        <!-- Pie Chart -->
+        <div class="col-xl col-lg">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">MAP</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Dropdown Header:</div>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div id = "map" class="card-body">
+                
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Content Row -->
 
     <div class="row">
@@ -256,6 +287,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Content Row -->
     <div class="row">
@@ -468,6 +500,9 @@
                         // console.log(data);
                         // Rememeber to use ` ` these ticks instead of " "
                         const obj = JSON.parse(data);
+                        var lat = obj.lat;
+                        var lon = obj.lon;
+                        // Estimate accuracy
                         var num = obj.acc;
                         var num = parseFloat(num);
                         var accuracy = num.toFixed(2);
@@ -477,6 +512,16 @@
                         $('#altitude').html(`${obj.alt}`);
                         $('#direction').html(`${obj.dir}`);
                         $('#speed').html(`${obj.spd}`);
+                        $('#map').html(`<div class="embed-responsive embed-responsive-16by9">
+                        <div  class="embed-responsive-item" >
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=${lat},${lon} "width="1200" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-danger"></i> Location Marker
+                        
+                    </div>`)
                     }
                 });
             }
