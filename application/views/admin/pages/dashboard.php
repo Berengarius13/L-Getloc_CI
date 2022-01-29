@@ -9,7 +9,7 @@
 
     <div class="row">
 
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-3 mb-4">
 
             <div class="card bg-primary border-left-light text-white shadow">
                 <div class="card-body">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-3 mb-4">
             <div class="card bg-success border-left-light text-white shadow">
                 <div class="card-body">
                     <div class="form-group">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-3 mb-4">
             <div class="card bg-info border-left-light text-white shadow">
                 <div class="card-body">
                     <div class="form-group">
@@ -57,6 +57,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 mb-4">
+            <div class="card bg-danger border-left-light text-white shadow">
+                <div class="card-body">
+                    <div class="form-group">
+                        <select name="imei" id="imei" class="form-control input-lg">
+                            <option value="">Select IMEI</option>
+
+                        </select>
+                    </div>
+                    <div class="text-white-50 small">IMEI functionality to be added in future</div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -64,14 +77,14 @@
     <!-- Content Row -->
     <div class="row">
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-4 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Latitude & Longitude</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">123, 92</div>
+                                Latitude</div>
+                            <div name="latitude" id="latitude" class="h5 mb-0 font-weight-bold text-gray-800">?</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-map-marker-alt fa-2x text-gray-300"></i>
@@ -81,34 +94,50 @@
             </div>
         </div>
         <!-- Pending Requests Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-4 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Accuracy</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">123</div>
+                                Longitude</div>
+                            <div id="longitude" class="h5 mb-0 font-weight-bold text-gray-800">?</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                            <i class="fas fa-map-marker-alt fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Accuracy</div>
+                            <div id="accuracy" class="h5 mb-0 font-weight-bold text-gray-800">?</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-bullseye fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-4 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Operating System of Target</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Win64</div>
+                                Altitude</div>
+                            <div id="altitude" class="h5 mb-0 font-weight-bold text-gray-800">?</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fab fa-windows fa-2x text-gray-300"></i>
+                            <i class="fas fa-map-marker-alt fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -116,22 +145,41 @@
         </div>
 
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
+
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Browser of User</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">Firefox</div>
+                                Speed</div>
+                            <div id="speed" class="h5 mb-0 font-weight-bold text-gray-800">?</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-window-maximize fa-2x text-gray-300"></i>
+                            <i class="fas fa-tachometer-alt fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-xl-4 col-md-6 mb-4">
+            <div class="card border-left-dark shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Direction</div>
+                            <div id="direction" class="h5 mb-0 font-weight-bold text-gray-800">?</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-street-view fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
 
@@ -385,19 +433,19 @@
                 });
             }
         });
-        $('#date').change(function(){
+        $('#date').change(function() {
             var date = $('#date').val();
             var ip = $('#ip').val();
             // console.log(date);
-            if(date != ''){
+            if (date != '') {
                 $.ajax({
-                    url : "<?php echo base_url()?>Admin/fetch_time",
-                    method : "POST",
-                    data : {
-                        date : date,
-                        ip : ip
-                    }, 
-                    success : function(data){
+                    url: "<?php echo base_url() ?>Admin/fetch_time",
+                    method: "POST",
+                    data: {
+                        date: date,
+                        ip: ip
+                    },
+                    success: function(data) {
                         $("#time").html(data);
                     },
                     fail: function() {
@@ -407,5 +455,33 @@
                 });
             }
         });
+        $('#time').change(function() {
+            var id = $('#time').val();
+            if (id != '') {
+                $.ajax({
+                    url: "<?php echo base_url() ?>Admin/fetch_location",
+                    method: "POST",
+                    data: {
+                        id: id
+                    },
+                    success: function(data) {
+                        // console.log(data);
+                        // Rememeber to use ` ` these ticks instead of " "
+                        const obj = JSON.parse(data);
+                        var num = obj.acc;
+                        var num = parseFloat(num);
+                        var accuracy = num.toFixed(2);
+                        $('#latitude').html(`<p>${obj.lat}</p>`);
+                        $('#longitude').html(`${obj.lon}`)
+                        $('#accuracy').html(`${accuracy}`);
+                        $('#altitude').html(`${obj.alt}`);
+                        $('#direction').html(`${obj.dir}`);
+                        $('#speed').html(`${obj.spd}`);
+                    }
+                });
+            }
+
+        });
+
     });
 </script>

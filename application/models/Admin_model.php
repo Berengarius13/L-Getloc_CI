@@ -35,4 +35,14 @@ class Admin_model extends CI_Model
         print_r(($output));
         return $output;
     }
+
+    function fetch_location($id){
+        $query = $this->db->get_where('result_info', array('id' => $id) );
+        $data = $query->result_array();
+        return json_encode($data[0]);
+    }
 }
+/*
+* You should encode the array in php file and return this. Returns the JSON representation of a value. json_encode
+* obj = JSON.parse(json) on view/ front end. Remember this method
+ */

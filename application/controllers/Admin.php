@@ -87,6 +87,12 @@ class Admin extends CI_Controller
 		}
 	}
 
+	public function fetch_location(){
+		if($this->input->post('id')){
+			echo $this->Admin_model->fetch_location($this->input->post('id'));
+		}
+	}
+
 	public function table_1 ($action, $id = false){
 		switch($action){
 			case "view":
