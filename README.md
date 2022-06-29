@@ -1,4 +1,4 @@
 # Location Software
-| For Educational purpose only.
+> For Educational purpose only.
 
 
