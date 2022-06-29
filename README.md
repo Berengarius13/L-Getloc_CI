@@ -1,4 +1,4 @@
-# Locatoion Phishing website with Backend	
-
+# Location Software
+> For Educational purpose only.
 
 
