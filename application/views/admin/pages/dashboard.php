@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 mb-4">
+        <!-- <div class="col-lg-3 mb-4">
             <div class="card bg-danger border-left-light text-white shadow">
                 <div class="card-body">
                     <div class="form-group">
@@ -69,7 +69,7 @@
                     <div class="text-white-50 small">IMEI functionality to be added in future</div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
