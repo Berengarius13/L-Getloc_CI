@@ -2,7 +2,7 @@
 #### [YouTube](https://youtu.be/DcCajs-7sKQ) 
 
 * A location tracking solution with admin panel.
-* Target is sent a link and then we will get location in admin panel.
+* Use social engineering to track location.
 
 ### Dashboard
 
