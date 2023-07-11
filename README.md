@@ -1,8 +1,10 @@
-# Location Software
+# Geo Trackify
 #### [YouTube](https://youtu.be/DcCajs-7sKQ) 
 
-* A location tracking solution with admin panel.
-* Use social engineering to track location.
+* Send a Targeted Link and Unlock Accurate Location Data Instantly.
+* Empowering Location Intelligence with an Intuitive Admin Panel.
+* Robust Backend in PHP with CodeIgniter Framework.
+* Harness the Power of Social Engineering for Precise Location Tracking.
 
 ### Dashboard
 
@@ -24,5 +26,5 @@
 
 
 #### Disclaimer
-> This tool is developed for educational purposes. Here it demonstrates how location phishing works. If anybody wants to gain unauthorized access to someones location, he/she may try out this at his/her own risk. You have your own responsibilities and you are liable to any damage or violation of laws by this tool. The author is not responsible for any misuse of Location software!
+> Disclaimer: This tool is provided for educational purposes only. It serves as a demonstration of how location phishing works and does not encourage or endorse any unauthorized access to someone's location. By using this tool, you acknowledge that you assume full responsibility and are solely liable for any actions taken or consequences arising from its use. It is your responsibility to comply with all applicable laws and regulations. The author of this tool shall not be held responsible for any misuse, damage, or legal violations caused by the use of this software. Use it at your own risk and exercise caution and ethical considerations at all times.
 
